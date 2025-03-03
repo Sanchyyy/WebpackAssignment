@@ -1,0 +1,58 @@
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    .home-image {
+        flex: 1;
+        text-align: center;
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .home-info {
+        flex: 2;
+        padding-left: 30px;
+
+        h2 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        h3 {
+            margin-top: 15px;
+            font-size: 22px;
+            color: #444;
+        }}
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                font-size: 16px;
+                background: #f4f4f4;
+                padding: 8px;
+                margin: 5px 0;
+                border-radius: 5px;
+            }
+        }
+    }
+
+@media (max-width:768px){
+    .home{
+        flex-direction: column;
+        width: 90%;
+    }
+}

@@ -1,0 +1,20 @@
+@use "./components/header/header";
+@use "./components/footer/footer";
+@use "./pages/home/home";
+@use "./pages/contact/contact";
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#app {
+  flex: 1; 
+}
