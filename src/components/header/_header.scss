@@ -1,5 +1,5 @@
 .navbar{
-  background-color: #24262b;
+  background-color: #2D336B;
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -13,7 +13,7 @@
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
-    color: antiquewhite;
+    color: white;
 
     @media(max-width:768px){
         display: none;
@@ -31,7 +31,7 @@
     }
 
     a{
-      color: antiquewhite;
+      color: white;
       text-decoration: none;
       font-size: 18px;
       transition: 0.3s;
@@ -46,7 +46,7 @@
 .menu-toggle{
   display: none;
   font-size: 24px;
-  color: antiquewhite;
+  color: #FFDFEF;
   cursor: pointer;
 }
 

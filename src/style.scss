@@ -2,11 +2,13 @@
 @use "./components/footer/footer";
 @use "./pages/home/home";
 @use "./pages/contact/contact";
+@use "./components/about/about";
 
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif;
 }
 
 body {

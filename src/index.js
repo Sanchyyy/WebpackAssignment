@@ -7,8 +7,6 @@ import { loadAbout } from './components/about/about.js';
 
 
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
   loadHeader(); 
   loadFooter();

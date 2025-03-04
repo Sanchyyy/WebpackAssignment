@@ -1,58 +1,191 @@
+body {
+    background: #FFF2F2;
+}
+
 .home {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 40px;
     padding: 20px;
+    margin-top: 3%;
 
-    .home-image {
-        flex: 1;
-        text-align: center;
-
-        .profile-photo {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+    @media (max-width: 992px) {
+        flex-direction: column;
     }
 
-    .home-info {
-        flex: 2;
-        padding-left: 30px;
+    .home-image {
+        .profile-photo {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+                        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            border: 8px double #2D336B;
 
-        h2 {
-            font-size: 28px;
-            color: #333;
-        }
+            @media (max-width: 992px) {
+                width: 200px;
+                height: 200px;
+            }
 
-        p {
-            font-size: 18px;
-            margin: 5px 0;
-        }
-
-        h3 {
-            margin-top: 15px;
-            font-size: 22px;
-            color: #444;
-        }}
-
-        ul {
-            list-style: none;
-            padding: 0;
-
-            li {
-                font-size: 16px;
-                background: #f4f4f4;
-                padding: 8px;
-                margin: 5px 0;
-                border-radius: 5px;
+            &:hover {
+                transform: scale(1.1);
+                animation-duration: 2s;
             }
         }
     }
 
-@media (max-width:768px){
-    .home{
+    .home-welcome {
+        h2 {
+            font-size: 28px;
+            font-weight: bold;
+            animation: bounce 1.5s infinite;
+            color: #2D336B;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    font-size: 24px;
+
+    h3 {
+        color: #2D336B;
+    }
+
+    .skills-set {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        gap: 40px;
+
+        @media (max-width: 992px) {
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .skills-wire {
+            width: 150px;
+            height: 250px;
+            animation: swing 1s ease-in-out alternate infinite;
+            transform-origin: center -20px;
+
+            @keyframes swing {
+                0% {
+                    transform: rotate(-4deg);
+                }
+                100% {
+                    transform: rotate(4deg);
+                }
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 10px;
+                height: 10px;
+                background-color: white;
+                top: -40px;
+                left: 50%;
+                border-radius: 50%;
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: 8px;
+                height: 40px;
+                border: 1px solid black;
+                top: -35px;
+                left: 50%;
+                z-index: -1;
+            }
+
+            img {
+                height: 150px;
+            }
+        }
+    }
+}
+
+.internship {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    font-size: 24px;
+    text-align: center;
+
+    h3 {
+        color: #2D336B;
+    }
+}
+
+.internship-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    max-width: 100%;
+
+    .internship-cris, 
+    .internship-axeno {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        overflow: hidden;
+        width: 280px;
+        border-radius: 10px;
+        background: #dadcf1;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .internship-cris_content, 
+        .internship-axeno_content {
+            padding: 15px;
+            text-align: center;
+
+            h4 {
+                font-size: 18px;
+                font-weight: bold;
+                color: #2D336B;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .internship-cards {
         flex-direction: column;
-        width: 90%;
+        align-items: center;
     }
 }
